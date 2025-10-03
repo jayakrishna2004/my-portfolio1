@@ -1,0 +1,166 @@
+/* Variables */
+:root {
+  --main-color: #ff9800;
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --nav-height: 60px;
+}
+
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+  background: #222;
+  height: var(--nav-height);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: var(--main-color);
+}
+
+/* Section Styling */
+main {
+  padding-top: var(--nav-height);
+}
+
+section {
+  min-height: 100vh;
+  padding: 80px 20px 50px;
+  text-align: center;
+  scroll-margin-top: calc(var(--nav-height) + 20px);
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: var(--main-color);
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  background: var(--main-color);
+  color: #fff;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.skills-list li:hover {
+  transform: scale(1.1);
+}
+
+/* Projects */
+.project-card {
+  background: #fff;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form textarea, form button {
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  background: var(--main-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #e68900;
+}
+
+#form-message {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
